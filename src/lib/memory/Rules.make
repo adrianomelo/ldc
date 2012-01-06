@@ -1,0 +1,5 @@
+OBJS=memory.o
+
+NAME=memory
+MAJOR_NUMBER=1
+MINOR_NUMBER=2
