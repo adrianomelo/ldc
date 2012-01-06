@@ -10,21 +10,14 @@
 #                    placed in /etc/init.d.
 ### END INIT INFO
 
-# Author: Foo Bar <foobar@baz.org>
-#
-# Please remove the "Author" lines above and replace them
-# with your own name if you copy and modify this script.
-
-# Do NOT "set -e"
-
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
-PATH=/sbin:/usr/sbin:/bin:/usr/bin
+PATH=/sbin:/usr/*
 DESC="Description of the service"
-NAME=daemonexecutablename
-DAEMON=/usr/sbin/$NAME
-DAEMON_ARGS="--options args"
+NAME=ldc
+DAEMON=/usr/bin/$NAME
+DAEMON_ARGS="-p"
 PIDFILE=/var/run/$NAME.pid
-SCRIPTNAME=/etc/init.d/$NAME
+SCRIPTNAME=/etc/init.d/ldc-daemon
 
 # Exit if the package is not installed
 [ -x "$DAEMON" ] || exit 0
