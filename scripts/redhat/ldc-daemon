@@ -1,0 +1,48 @@
+#!/bin/sh
+#
+# chkconfig: 35 90 12
+# description: LDC
+#
+
+# Get function from functions library
+. /etc/init.d/functions
+
+start() {
+        initlog -c "echo -n Starting LDC: "
+        /usr/bin/ldc &
+        ### Create the lock file ###
+        touch /var/lock/subsys/ldc
+        success $"LDC startup"
+        echo
+}
+
+stop() {
+        initlog -c "echo -n Stopping LDC: "
+        killproc ldc
+        ### Now, delete the lock file ###
+        rm -f /var/lock/subsys/ldc
+        echo
+}
+
+### main logic ###
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  status)
+        status ldc
+        ;;
+  restart|reload|condrestart)
+        stop
+        start
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|restart|reload|status}"
+        exit 1
+esac
+
+exit 0
+

@@ -1,0 +1,29 @@
+include Rules.make
+
+BIN=../../../bin
+SRC=../..
+TEST=../../../tests
+
+CC=gcc -c
+GCC=gcc
+LN=ln
+CFLAGS=-g -Wall -I.. -I$(SRC)/include -fPIC -m32
+LDFLAGS=-g -Wall -L$(BIN) -lldccore -lldc$(NAME) -I.. -I$(SRC)/include $(ELDFLAGS) -m32
+
+all: build 
+
+build: $(OBJS)
+	$(GCC) *.o -shared -Wl,-soname,libldc$(NAME).so.$(MAJOR_NUMBER) -o $(BIN)/libldc$(NAME).so.$(MAJOR_NUMBER).$(MINOR_NUMBER) -lc -lldccore -L $(BIN) $(ELDFLAGS) -fPIC -L $(TEST)/bin/ -m32
+	@$(LN) -sf libldc$(NAME).so.$(MAJOR_NUMBER).$(MINOR_NUMBER) $(BIN)/libldc$(NAME).so.$(MAJOR_NUMBER)
+	@$(LN) -sf libldc$(NAME).so.$(MAJOR_NUMBER) $(BIN)/libldc$(NAME).so
+
+
+test: $(OBJS)
+	$(GCC) $(LDFLAGS) -o $(TEST)/bin/exec_$(NAME) $(TEST)/lib/main.c -L $(TEST)/bin/
+	$(GCC) $(LDFLAGS) -o $(TEST)/bin/test_$(NAME) $(TEST)/lib/main_$(NAME).c -lcheck -L $(TEST)/bin/
+
+.c.o:
+	$(CC) $(CFLAGS) $<
+
+clean:
+	$(RM) *.o

@@ -1,0 +1,80 @@
+#value tags
+YES=sim
+NO=não
+
+############# common tags ###########
+Vendor=Fabricante
+Model=Modelo
+Type=Tipo
+Product=Produto
+Version=Versão
+Serial Number=Número Serial
+Voltage=Voltagem
+ID=ID
+Firmware=Firmware
+Configuration=Configuração
+Size=Tamanho
+
+############## network ##############
+Interface=Interface
+IP Address=Endereço IP
+MAC Address=Endereço MAC
+DNS Servers=Servidores DNS
+Gateway=Gateway
+Link UP=Link Up
+Link Detected=Link Detected
+
+############# motherboard #############
+UUID=UUID
+Release Date=Data de Lançamento
+
+############## memory #################
+Maximum Memory Module Size=Memória Máxima do Módulo
+Maximum Total Memory Size=Memória Máxima Total
+Slots=Slots
+Form Factor=Form Factor
+Type Detail=Detalhes do Tipo
+
+############# processor ###############
+Family=Família
+Socket Designation=Socket Designation
+External Clock=Clock Externo
+Handle=Handle
+Operational Mode=Modo Operacional
+Location=Localização
+Installed Size=Tamanho Instalado
+Maximum Size=Tamanho Máximo
+Installed SRAM Type=Tipo de SRAM Instalado
+Speed=Velocidade
+Error Correction Type=Tipo de Correção de Erro
+System Type=Tipo de Sistema
+Associativity=Associatividade
+Vendor ID=ID do Fabricante
+CPU Frequency(MHz)=Frequência da CPU
+Physical ID=Id Físico
+Core ID=Id do Core
+CPU Cores=Cores da CPU
+Features=Flags
+
+############## harddisk #################
+Bus Type=Barramento
+Physical Sector Size=Tamanho do Setor
+Partition Name=Nome da Partição
+Partition Number=Número da Partição
+Partition Flags=Flags da Partição
+Partition Start=Início da Partição
+Partition End=Fim da Partição
+Partition Size=Tamanho da Partição
+Used Space=Usado
+Available Space=Disponível
+Percentage Used=Em uso
+Mounted On=Montado em
+Partition File System=Sistema de Arquivos da Partição
+
+############## software #################
+Kernel Version=Versão do Kernel
+Architecture=Arquitetura
+Distro=Distribuição
+Node Name=Nome do Computador
+GCC Version=Versão do GCC
+
