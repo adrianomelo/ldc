@@ -42,6 +42,7 @@
 #include <ldc/string.h>
 #include <ldc/log.h>
 #include <ldc/config.h>
+#include <ldc/system.h>
 
 #define WAIT_TIME 20000000
 #define INTERVAL 20000
@@ -51,6 +52,10 @@ int wait_child_process(pid_t pid, unsigned int microseconds, unsigned int total_
 int main (int argc, char *argv[])
 {
 	log_debug ("Execução do LDC iniciada.");
+
+	if (!is_root())
+		log_debug("LDC executado sem permissão de root.");
+
 
 	hash_table *table = new_hash_table();
 
