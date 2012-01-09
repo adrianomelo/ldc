@@ -33,6 +33,14 @@ install_librix:
 	cp -R scripts/librix/* /etc/init.d/
 	rc-update add ldc-daemon default
 
+install_debian:
+	cp -R scripts/debian/* /etc/init.d/
+	sed -i 's|LDC_PREFIX|$(prefix)|g' /etc/init.d/ldc-daemon
+	update-rc.d ldc-daemon defaults
+
+uninstall_debian:
+	update-rc.d -f ldc-daemon remove
+
 uninstall:
 	rm -fr $(prefix)/bin/ldc*
 	rm -fr /usr/bin/ldc*
