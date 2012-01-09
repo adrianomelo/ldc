@@ -1,0 +1,25 @@
+# binaries
+bin/lib*
+bin/test*
+bin/ldc*
+
+tests/bin/exec_*
+tests/bin/lib*
+tests/test_*
+
+# vim tmp files
+*.swp
+*~
+
+# ldc tmp files
+*.xml
+*.o
+
+# doxygen tmp files
+doc/Doxygen*
+doc/Doxygen/*
+
+
+
+
+
