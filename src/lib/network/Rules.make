@@ -1,0 +1,5 @@
+OBJS=network.o
+
+NAME=network
+MAJOR_NUMBER=1
+MINOR_NUMBER=0
