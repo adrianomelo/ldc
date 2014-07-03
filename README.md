@@ -30,7 +30,7 @@ To install, use::
   sudo make build install
 
 
-Important References
+Contributors
 ================================================================
 
 List of contributors of the project.
@@ -39,3 +39,4 @@ List of contributors of the project.
 - Hugo Alencar <hraa@cin.ufpe.br>
 - Dayvid Victor <dvro@cin.ufpe.br>
 - Thyago Porpino <tnp@cin.ufpe.br>
+
