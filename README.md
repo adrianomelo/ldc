@@ -27,7 +27,7 @@ Install
 
 To install, use::
 
-  sudo make build install
+    sudo make build install
 
 
 Contributors
