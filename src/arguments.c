@@ -154,22 +154,21 @@ int load_options(hash_table *table, int argc, char *argv[])
 
 void print_help()
 {
-	printf("\nLinux Diagnostic Center									\n");
-	printf("Uso: ldc [OPTIONS]										\n");
-	printf(" -p, --print 		: Imprime os as informações dos dispositivos inventariados.		\n");
-	printf(" -h, --help  		: Imprime esta mensagem e finaliza o programa.				\n");
-	printf(" -v, --version 		: Imprime a versão e finaliza o programa.           			\n");
-	printf(" -x, --xml FILE 	: Define o arquivo xml a ser gerado com as informações inventariadas.	\n");
-	printf(" -d, --device DEVICE 	: Inclui um device na lista de devices inventariados.			\n");
-	printf(" -e, --exclude DEVICE	: Exclui um device na lista de devices inventariados.          		\n");
-	printf(" -o, --only DEVICE	: Defina a lista de devices inventariados contendo apenas um device.	\n");
-	printf(" -s, --single-process	: Executa o LDC usando um único processo ao invés de vários. Permite	\n");
-	printf("			  a geração da saída xml num único arquivo.				\n");
+	printf("Linux Diagnostic Center										\n");
+	printf("Usage: ldc [OPTIONS]										\n");
+	printf(" -p, --print            : Prints the devices' informations.					\n");
+	printf(" -h, --help             : Prints this help message.						\n");
+	printf(" -v, --version          : Prints LDC version.							\n");
+	printf(" -x, --xml FILE         : Generates the output in XML format.					\n");
+	printf(" -d, --device DEVICE    : Includes a device (plugin) in the list of devices.			\n");
+	printf(" -e, --exclude DEVICE   : Excludes a device (plugin) from the list of devices.			\n");
+	printf(" -o, --only DEVICE      : Generates the output of a single device.				\n");
+	printf(" -s, --single-process   : Runs LDC using a single process (allows XML output mode).		\n");
 	printf("												\n");
-	printf("DEVICE : processor, memory, network, harddisk, motherboard, software.				\n");
-	printf("	 											\n");
-	printf("As opções setadas por argumento sobrepõem as informações do arquivo de configuração.		\n");
-	printf("Para mais detalhes, consulte o manual do usuário do LDC.					\n\n");
+	printf("DEVICE: processor, memory, network, harddisk, motherboard, software.				\n");
+	printf("												\n");
+	printf("The command line options overrides the options in the configuration file.			\n");
+	printf("See file ldc/src/ldc.conf for default options.							\n\n");
 }
 
 void print_version()
@@ -180,8 +179,8 @@ void print_version()
 void print_syntax_error()
 {
 	printf("\n");
-	printf("Opção inválida.				\n");
-	printf("Consulte ldc --help para uso correto.	\n");
+	printf("ldc: invalid option.				\n");
+	printf("Try 'ldc --help' for more information.		\n");
 	printf("\n");
 }
 

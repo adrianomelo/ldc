@@ -59,7 +59,7 @@ Output:
 Usage options:
 ```
 Linux Diagnostic Center									
-Uso: ldc [OPTIONS]										
+Usage: ldc [OPTIONS]										
  -p, --print 		: Prints the devices' informations.
  -h, --help  		: Prints this help message.
  -v, --version 		: Prints LDC version.
